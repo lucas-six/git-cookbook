@@ -33,6 +33,7 @@ git config --global credential.helper store
 - Delete Branch
 - Tag
 - Remote Branch
+- Patch
 - Git Server (SSH-based)
 
 ---
@@ -178,8 +179,8 @@ git branch -D <branch-name>    # NOT merged branch
 ```bash
 git tag -a <tag> -m '<tag-comment>'      # e.g., git tag -a 'v0.1' -m 'v0.1 - Initial version'
 
-git push --tag                           # Add tag remotely
-git push origin :refs/tags/<tag-name>    # Delete tag remotely
+git push --tag                           # Add remote tag
+git push origin :refs/tags/<tag-name>    # Delete remote tag
 ```
 
 ## Remote Branch
@@ -193,6 +194,34 @@ git remote -v
 ```bash
 git push [-f] <remote-repo> :<remote-branch>
 ```
+
+## Patch
+
+### Create Git Patch
+```bash
+... (git commit -m)
+git format-patch -M <upstream-branch> <current-branch>.patch
+```
+
+### Apply Git Patch
+```bash
+git am <current-branch>.patch
+... (git add+commit)
+```
+
+### Create Standard Patch
+```bash
+... (git commit)
+git diff <upstream-branch> > <current-branch>.patch
+```
+
+### Apply Standard Patch
+```bash
+git apply --check <current-branch>.patch
+git apply <current-branch>.patch
+... (git add+commit)
+```
+
 
 ## Git Server (SSH-based)
 
