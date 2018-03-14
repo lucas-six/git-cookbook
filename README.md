@@ -21,6 +21,17 @@ git config --global credential.helper store
 
 ---
 
+- Commit Message
+- Undo
+- Log
+- Version Difference
+- Delete Branch
+- Tag
+- Remote Branch
+- Git Server (SSH-based)
+
+---
+
 ## Commit Message
 
 ```
