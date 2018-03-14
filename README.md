@@ -64,6 +64,10 @@ Text files (including code and doc) in your repo should be all `UTF-8` encoded.
 
 ## Git Workflow
 
+### Git Branch Model
+
+![](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
+
 ### Mainstream
 
 Branch `master` contains codes only for official releases with some version tags for production.
