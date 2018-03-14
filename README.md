@@ -1,6 +1,6 @@
 # Git Cookbook
 
-Getting started with Git, please read the Chapter 1, 2, 3 of [Pro Git](https://www.git-scm.com/book/en/v2).
+Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2).
 
 ```bash
 git version  # v1.9.5+
@@ -21,6 +21,8 @@ git config --global credential.helper store
 
 ---
 
+- Git Workflow
+- GitHub Workflow
 - Commit Message
 - Undo
 - Log
@@ -31,6 +33,30 @@ git config --global credential.helper store
 - Git Server (SSH-based)
 
 ---
+
+## Git Workflow
+
+Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/).
+
+Text files (including code and doc) in your repo should be all `UTF-8` encoded.
+
+1. `git clone <repo-url> [<dir>]`
+1. (optional)`git remote add upstream <origin-repo-url>`
+1. (optional)`git pull upstream <branch>`
+1. `git checkout <branch>` (default `master`) or `git checkout -b <branch>`
+1. Update files
+1. `git status`
+1. `git diff`
+1. `git diff --check`
+1. `git add|rm|mv <file ... or dir>`
+1. `git diff --cached`
+1. `git commit -m '<commit message>'`
+1. `git push` to Git Server
+
+## GitHub Workflow
+
+- `Fork`
+- `Pull Request`: `git merge --no-ff <branch-name>`
 
 ## Commit Message
 
