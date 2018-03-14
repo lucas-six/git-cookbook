@@ -1,21 +1,25 @@
 # Git Cookbook
 
-## Step 0
-
 Getting started with Git, please read the Chapter 1, 2, 3 of [Pro Git](https://www.git-scm.com/book/en/v2).
-
-Start to use it, configure it:
 
 ```bash
 git version  # v1.9.5+
+```
 
+Before start, configure it:
+
+```bash
 git config --global user.name 'Li Yun'                   # Your name
 git config --global user.email leven.cn@gmail.com        # Your working email, just as GitHub registered email
 
-git config --list                                        # Show your current configuration
+# Show your current configuration
+git config --list
 
-git config --global credential.helper store              # Warning: Store your password in local host, ensure you are working in a secure environment
+# Warning: Store your password in local host, ensure you are working in a secure environment
+git config --global credential.helper store
 ```
+
+---
 
 ## Commit Message
 
