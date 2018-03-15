@@ -2,13 +2,31 @@
 
 Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2).
 
-[Bash Cookbook](https://github.com/leven-cn/bash-cookbook) should help you.
+[Bash Cookbook](https://github.com/leven-cn/bash-cookbook) should be able to help you.
 
 ```bash
 git version  # v1.9.5+
 ```
 
 Before start, configure it:
+
+**System wide configuration (All users in the system)**
+
+```bash
+sudo git config --system help.autocorrect 1
+sudo git config --system core.eol lf
+sudo git config --system core.autocrlf input
+sudo git config --system core.filemode true
+sudo git config --system core.editor vim
+sudo git config --system color.ui auto
+sudo git config --system diff.tool vimdiff
+sudo git config --system merge.tool vimdiff
+sudo git config --system push.default simple
+sudo git config --system credential.helper "cache --timeout=3600"
+sudo git config --system gui.encoding utf-8
+```
+
+**User wide configuration**
 
 ```bash
 git config --global user.name 'Li Yun'                   # Your name
