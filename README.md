@@ -60,11 +60,11 @@ git config --global credential.helper store
 
 Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/).
 
-Text files (including code and doc) in your repo should be all `UTF-8` encoded.
+All text files (including code and doc) in your repo should be `UTF-8` encoded.
 
 1. `git clone <repo-url> [<dir>]`
-1. (optional)`git remote add upstream <origin-repo-url>`
-1. (optional)`git pull upstream <branch>`
+1. (optional)`git remote add <upstream> <repo-url>` (default `origin`)
+1. (optional)`git pull <upstream> <branch>`
 1. `git checkout <branch>` (default `master`) or `git checkout -b <branch>`
 1. Update files
 1. `git status`
@@ -72,7 +72,7 @@ Text files (including code and doc) in your repo should be all `UTF-8` encoded.
 1. `git diff --check`
 1. `git add|rm|mv <file ... or dir>`
 1. `git diff --cached`
-1. `git commit -m '<commit message>'`
+1. `git commit -m '<commit message>'` or `git commit --amend`
 1. `git push` to Git Server
 
 ## GitHub Workflow
