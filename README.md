@@ -112,7 +112,7 @@ git push --tag
 
 ```bash
 git checkout -b <bugfix-A> master
-# ... (git add/rm)
+# ... (git add/rm/mv)
 git diff [--cached] <path ...>
 git diff --check # Avoid white space issues commit
 # ... (git commit -m)
@@ -131,7 +131,7 @@ I think that it is better for same features by using `rebase`, while for differe
 ```bash
 git checkout <feature-A> develop
 git pull --rebase
-# ... (git add/rm)
+# ... (git add/rm/mv)
 git diff [--cached] <path ...>
 git diff --check # Avoid white space issues commit
 # ... (git commit -m)
