@@ -22,6 +22,7 @@ sudo git config --system color.ui auto
 sudo git config --system diff.tool vimdiff
 sudo git config --system merge.tool vimdiff
 sudo git config --system push.default simple
+# git config --system push.default current  # Git 1.7.10-
 sudo git config --system credential.helper "cache --timeout=3600"
 sudo git config --system gui.encoding utf-8
 ```
@@ -83,6 +84,8 @@ All text files (including code and doc) in your repo should be `UTF-8` encoded.
 ## Git Workflow
 
 ### Git Branch Model
+
+Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ![](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
 
@@ -146,6 +149,22 @@ git merge --no-ff <feature-A>
 
 一旦`develop`分支上有了做一次发布（或者说快到了既定的发布日）的足够功能，就从`develop`分支上fork一个发布分支`release`。新建的分支用于开始发布循环，所以从这个时间点开始之后新的功能不能再加到这个分支上 —— 这个分支只应该做**Bug修复**、**文档生成**和其它面向发布任务。一旦对外发布的工作都完成了，发布分支合并到master分支并分配一个版本号打好Tag。另外，这些从新建发布分支以来的做的修改要合并回`develop`分支。
 
+### Let's Go! (GitFlow User Guide)
+
+Read [](https://github.com/nvie/gitflow).
+
+```bash
+git flow init [-d]
+```
+
+```bash
+git flow feature/release/hotfix
+git flow feature/release/hotfix start <branch-name>
+git flow feature/release/hotfix finish <branch-name>
+
+git flow feature/release/hotfix pull <reomote> <branch-name>
+git flow feature/release/hotfix publish <branch-name>
+```
 
 ## Commit Message
 
