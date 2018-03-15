@@ -78,6 +78,7 @@ All text files (including code and doc) in your repo should be `UTF-8` encoded.
 
 ## GitHub Workflow
 
+- `Star` / `Watch`
 - `Fork`
 - `Pull Request`: `git merge --no-ff <branch-name>`
 
