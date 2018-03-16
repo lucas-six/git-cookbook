@@ -80,6 +80,13 @@ For more details about [Semantic Versioning](https://semver.org) ([语义化版�
 
 ## GitHub Workflow
 
+Reter to:
+
+- [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+- [GitHub Flow Guide](https://guides.github.com/introduction/flow/index.html)
+
+And follow steps:
+
 - `Star` / `Watch`
 - `Fork`
 - `Pull Request`: `git merge --no-ff <branch-name>`
@@ -88,7 +95,7 @@ For more details about [Semantic Versioning](https://semver.org) ([语义化版�
 
 ### Git Branch Model
 
-Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/)
+Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/) and [How to use a scalable Git branching model called git-flow (by Build a Module)](https://jeffkreeftmeijer.com/git-flow/)
 
 ![](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
 
