@@ -2,7 +2,7 @@
 
 Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2).
 
-[Bash Cookbook](https://github.com/leven-cn/bash-cookbook) should be able to help you.
+[Bash Cookbook](https://leven-cn.github.io/bash-cookbook) should be able to help you.
 
 ```bash
 git version  # v1.9.5+
