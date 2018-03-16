@@ -152,7 +152,7 @@ git merge --no-ff <feature-A>
 
 ### Let's Go! (GitFlow User Guide)
 
-Read [](https://github.com/nvie/gitflow).
+Read [GitFlow GitHub](https://github.com/nvie/gitflow).
 
 ```bash
 git flow init [-d]
