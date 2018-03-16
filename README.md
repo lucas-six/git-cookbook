@@ -1,6 +1,6 @@
 # Git Cookbook
 
-Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2).
+Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2) ([Pro Git 中文版](http://git.oschina.net/progit/)).
 
 [Bash Cookbook](https://leven-cn.github.io/bash-cookbook) should be able to help you.
 
@@ -59,9 +59,11 @@ git config --global credential.helper store
 
 ## Quick Start
 
-Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/).
+Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/) ([Pro Git 中文版](http://git.oschina.net/progit/)).
 
 All text files (including code and doc) in your repo should be `UTF-8` encoded.
+
+For more details about [Semantic Versioning](https://semver.org) ([语义化版本规范](https://semver.org/lang/zh-CN/)).
 
 1. `git clone <repo-url> [<dir>]`
 1. (optional)`git remote add <upstream> <repo-url>` (default `origin`)
