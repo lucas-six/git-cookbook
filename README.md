@@ -1,6 +1,6 @@
 # Git Cookbook
 
-Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/v2) ([Pro Git 中文版](http://git.oschina.net/progit/)).
+Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/) ([中文版](https://www.git-scm.com/book/zh/)).
 
 [Bash Cookbook](https://leven-cn.github.io/bash-cookbook) should be able to help you.
 
@@ -59,7 +59,7 @@ git config --global credential.helper store
 
 ## Quick Start
 
-Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/) ([Pro Git 中文版](http://git.oschina.net/progit/)).
+Refer to Chapter 5,6 of [Pro Git](http://www.git-scm.com/book/) ([中文版](https://www.git-scm.com/book/zh/)).
 
 All text files (including code and doc) in your repo should be `UTF-8` encoded.
 
