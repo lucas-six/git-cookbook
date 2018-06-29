@@ -5,7 +5,7 @@ Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www
 [Bash Cookbook](https://leven-cn.github.io/bash-cookbook) should be able to help you.
 
 ```bash
-git version  # v1.9.5+
+git version  # v2.0+
 ```
 
 Before start, configure it:
@@ -22,7 +22,6 @@ sudo git config --system color.ui auto
 sudo git config --system diff.tool vimdiff
 sudo git config --system merge.tool vimdiff
 sudo git config --system push.default simple
-# git config --system push.default current  # Git 1.7.10-
 sudo git config --system credential.helper "cache --timeout=3600"
 sudo git config --system gui.encoding utf-8
 ```
