@@ -32,6 +32,10 @@ For user wide configuration:
 git config --global user.name 'Li Yun'                   # Your name
 git config --global user.email leven.cn@gmail.com        # Your working email, just as GitHub registered email
 
+# VS Code
+git config --global core.editor "code --wait"
+git config --global diff.tool "code --wait ---diff $LOCAL $REMOTE"
+
 # Show your current configuration
 git config --list
 
