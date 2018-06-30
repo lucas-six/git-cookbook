@@ -10,7 +10,7 @@ git version  # v2.0+
 
 Before start, configure it:
 
-**System wide configuration (All users in the system)**
+For system wide configuration (All users in the system):
 
 ```bash
 sudo git config --system help.autocorrect 1
@@ -26,7 +26,7 @@ sudo git config --system credential.helper "cache --timeout=3600"
 sudo git config --system gui.encoding utf-8
 ```
 
-**User wide configuration**
+For user wide configuration:
 
 ```bash
 git config --global user.name 'Li Yun'                   # Your name
@@ -96,7 +96,7 @@ And follow steps:
 
 Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/) and [How to use a scalable Git branching model called git-flow (by Build a Module)](https://jeffkreeftmeijer.com/git-flow/)
 
-![](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
+![Git Branch Model](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
 
 ### Mainstream
 
@@ -177,7 +177,7 @@ git flow feature/release/hotfix publish <branch-name>
 
 ## Commit Message
 
-```
+```markdown
 This update contains improvement and bug fixes, including:
 
     - Fixed bugs where user cannot signup
@@ -248,30 +248,33 @@ git push [-f] <remote-repo> :<remote-branch>
 ## Patch
 
 ### Create Git Patch
+
 ```bash
 ... (git commit -m)
 git format-patch -M <upstream-branch> <current-branch>.patch
 ```
 
 ### Apply Git Patch
+
 ```bash
 git am <current-branch>.patch
 ... (git add+commit)
 ```
 
 ### Create Standard Patch
+
 ```bash
 ... (git commit)
 git diff <upstream-branch> > <current-branch>.patch
 ```
 
 ### Apply Standard Patch
+
 ```bash
 git apply --check <current-branch>.patch
 git apply <current-branch>.patch
 ... (git add+commit)
 ```
-
 
 ## Git Server (SSH-based)
 
