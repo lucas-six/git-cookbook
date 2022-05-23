@@ -2,8 +2,6 @@
 
 Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/) ([中文版](https://www.git-scm.com/book/zh/)).
 
-[Bash Cookbook](http://zhiliaokeji.com/bash-cookbook) should be able to help you.
-
 ```bash
 git version  # v2.0+
 ```
