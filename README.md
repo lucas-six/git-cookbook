@@ -1,3 +1,7 @@
+此项目已经停止更新，已并入组织 Dookbook (<https://github.com/dookbook>)
+
+Dookbook (<https://dookbook.info/>)，是软件开发的日常菜谱，开箱即用，提供常用的代码示例。
+
 # Git Cookbook
 
 Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/) ([中文版](https://www.git-scm.com/book/zh/)).
