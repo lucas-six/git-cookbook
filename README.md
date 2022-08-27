@@ -30,6 +30,7 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [Git Quick Start](https://leven-cn.github.io/git-cookbook/recipes/git_quickstart)
 - [Git Workflow](https://leven-cn.github.io/git-cookbook/recipes/git_workflow)
 - [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone)
+- [Git Configuration](https://leven-cn.github.io/git-cookbook/recipes/git_config)
 
 ***
 

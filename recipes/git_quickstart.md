@@ -16,7 +16,7 @@ git version  # v2.23+
 git clone https://github.com/leven-cn/git-cookbook.git
 ```
 
-For more details for [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone).
+More details to see [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone).
 
 ## Git Config
 
@@ -54,7 +54,7 @@ git config --list  # all configs
 git config <name>  # specified config
 ```
 
-For more details for [[Git config]].
+More details to see [Git Configuration](https://leven-cn.github.io/git-cookbook/recipes/git_config).
 
 ## Lifecyle
 
@@ -123,16 +123,6 @@ git commit -a -m '<commit message>'
 
 For more details for [[Git add]], [[Git remove]], [[Git restore]], [[Git commit]], [[Git reset]],
 [[Git diff]].
-
----
-
-Before start, configure it:
-
-```bash
-sudo git config --system help.autocorrect 1
-sudo git config --system core.filemode true
-sudo git config --system gui.encoding utf-8
-```
 
 ## More
 
