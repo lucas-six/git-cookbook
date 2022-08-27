@@ -1,10 +1,7 @@
-此项目已经停止更新，已并入组织 Dookbook (<https://github.com/dookbook>)
-
-Dookbook (<https://dookbook.info/>)，是软件开发的日常菜谱，开箱即用，提供常用的代码示例。
-
 # Git Cookbook
 
-Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/) ([中文版](https://www.git-scm.com/book/zh/)).
+Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/)
+([中文版](https://www.git-scm.com/book/zh/)).
 
 ```bash
 git version  # v2.0+
@@ -100,7 +97,8 @@ And follow steps:
 
 ### Git Branch Model
 
-Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/) and [How to use a scalable Git branching model called git-flow (by Build a Module)](https://jeffkreeftmeijer.com/git-flow/)
+Refer to Vincent Driessen's [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/)
+and [How to use a scalable Git branching model called git-flow (by Build a Module)](https://jeffkreeftmeijer.com/git-flow/)
 
 ![Git Branch Model](https://raw.githubusercontent.com/leven-cn/git-cookbook/master/Git-Branch-Model.png)
 
@@ -144,7 +142,8 @@ git branch -d <bugfix-A>
 
 ### Features
 
-I think that it is better for same features by using `rebase`, while for different ones by using `merge`. Since it will keep the branch structure clean.
+I think that it is better for same features by using `rebase`, while for different ones by using `merge`.
+Since it will keep the branch structure clean.
 
 ```bash
 git checkout <feature-A> develop
@@ -162,7 +161,8 @@ git merge --no-ff <feature-A>
 
 ### Releases
 
-一旦`develop`分支上有了做一次发布（或者说快到了既定的发布日）的足够功能，就从`develop`分支上fork一个发布分支`release`。新建的分支用于开始发布循环，所以从这个时间点开始之后新的功能不能再加到这个分支上 —— 这个分支只应该做**Bug修复**、**文档生成**和其它面向发布任务。一旦对外发布的工作都完成了，发布分支合并到master分支并分配一个版本号打好Tag。另外，这些从新建发布分支以来的做的修改要合并回`develop`分支。
+一旦`develop`分支上有了做一次发布（或者说快到了既定的发布日）的足够功能，就从`develop`分支上fork一个发布分支`release`。
+新建的分支用于开始发布循环，所以从这个时间点开始之后新的功能不能再加到这个分支上 —— 这个分支只应该做**Bug修复**、**文档生成**和其它面向发布任务。一旦对外发布的工作都完成了，发布分支合并到master分支并分配一个版本号打好Tag。另外，这些从新建发布分支以来的做的修改要合并回`develop`分支。
 
 ### Let's Go! (GitFlow User Guide)
 
