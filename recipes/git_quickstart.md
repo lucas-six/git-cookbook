@@ -13,21 +13,10 @@ git version  # v2.23+
 ## Git Clone
 
 ```bash
-git clone <repository-address> [<directory>]
-```
-
-**Clone** a repository into a *newly created* directory `directory` from `repository-address`.
-
-`repository-address` is the (possibly remote) repository to clone from.
-See the [[Git URL]] for more information on specifying repositories.
-
-For example:
-
-```bash
 git clone https://github.com/leven-cn/git-cookbook.git
 ```
 
-For more details for [[Git Clone]].
+For more details for [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone).
 
 ## Git Config
 

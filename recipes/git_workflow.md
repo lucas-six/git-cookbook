@@ -90,3 +90,5 @@ git flow feature/release/hotfix publish <branch-name>
 - [Git Branch Model, 2010](http://nvie.com/posts/a-successful-git-branching-model/)
 - [How to use a scalable Git branching model called git-flow (by Build a Module)](https://jeffkreeftmeijer.com/git-flow/)
 - [GitFlow GitHub](https://github.com/nvie/gitflow)
+- [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+- [GitHub Flow Guide](https://guides.github.com/introduction/flow/index.html)

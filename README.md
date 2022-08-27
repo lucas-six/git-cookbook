@@ -29,11 +29,10 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [Git Features](https://leven-cn.github.io/git-cookbook/recipes/git_features)
 - [Git Quick Start](https://leven-cn.github.io/git-cookbook/recipes/git_quickstart)
 - [Git Workflow](https://leven-cn.github.io/git-cookbook/recipes/git_workflow)
+- [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone)
 
 ***
 
-- GitHub Workflow
-- Git Workflow
 - Commit Message
 - Undo
 - Log
@@ -45,19 +44,6 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - Git Server (SSH-based)
 
 ***
-
-## GitHub Workflow
-
-Reter to:
-
-- [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
-- [GitHub Flow Guide](https://guides.github.com/introduction/flow/index.html)
-
-And follow steps:
-
-- `Star` / `Watch`
-- `Fork`
-- `Pull Request`: `git merge --no-ff <branch-name>`
 
 ## Commit Message
 
