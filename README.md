@@ -2,7 +2,7 @@
 
 <section align="center">
   <img src="https://leven-cn.github.io/git-cookbook/img/git-logo.png"
-    alt="Git Logo" width="200" height="200" title="Git Logo">
+    alt="Git Logo" width="512" height="214" style="text-align:center;" title="Git Logo">
   <br><br>
   <p>
     <a href="https://github.com/leven-cn/git-cookbook/actions/workflows/lint.yml">
@@ -27,54 +27,10 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 ## Recipes
 
 - [Git Features](https://leven-cn.github.io/git-cookbook/recipes/git_features)
+- [Git Quick Start](https://leven-cn.github.io/git-cookbook/recipes/git_quickstart)
 
 ***
 
-Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/)
-([中文版](https://www.git-scm.com/book/zh/)).
-
-```bash
-git version  # v2.0+
-```
-
-Before start, configure it:
-
-For system wide configuration (All users in the system):
-
-```bash
-sudo git config --system help.autocorrect 1
-sudo git config --system core.eol lf
-sudo git config --system core.autocrlf input
-sudo git config --system core.filemode true
-sudo git config --system core.editor vim
-sudo git config --system color.ui auto
-sudo git config --system diff.tool vimdiff
-sudo git config --system merge.tool vimdiff
-sudo git config --system push.default simple
-sudo git config --system credential.helper "cache --timeout=3600"
-sudo git config --system gui.encoding utf-8
-```
-
-For user wide configuration:
-
-```bash
-git config --global user.name 'Li Yun'                   # Your name
-git config --global user.email leven.cn@gmail.com        # Your working email, just as GitHub registered email
-
-# VS Code
-git config --global core.editor "code --wait"
-git config --global diff.tool "code --wait ---diff $LOCAL $REMOTE"
-
-# Show your current configuration
-git config --list
-
-# Warning: Store your password in local host, ensure you are working in a secure environment
-git config --global credential.helper store
-```
-
-***
-
-- Quick Start
 - GitHub Workflow
 - Git Workflow
 - Commit Message
@@ -88,27 +44,6 @@ git config --global credential.helper store
 - Git Server (SSH-based)
 
 ***
-
-## Quick Start
-
-Refer to Chapter 5,6 of [Pro Git](https://www.git-scm.com/book/) ([中文版](https://www.git-scm.com/book/zh/)).
-
-All text files (including code and doc) in your repo should be `UTF-8` encoded.
-
-For more details about [Semantic Versioning](https://semver.org) ([语义化版本规范](https://semver.org/lang/zh-CN/)).
-
-1. `git clone <repo-url> [<dir>]`
-1. (optional)`git remote add <upstream> <repo-url>` (default `origin`)
-1. (optional)`git pull <upstream> <branch>`
-1. `git checkout <branch>` (default `master`) or `git checkout -b <branch>`
-1. Update files
-1. `git status`
-1. `git diff`
-1. `git diff --check`
-1. `git add|rm|mv <file ... or dir>`
-1. `git diff --cached`
-1. `git commit -m '<commit message>'` or `git commit --amend`
-1. `git push` to Git Server
 
 ## GitHub Workflow
 
