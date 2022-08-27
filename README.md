@@ -72,7 +72,7 @@ git config --list
 git config --global credential.helper store
 ```
 
----
+***
 
 - Quick Start
 - GitHub Workflow
@@ -87,7 +87,7 @@ git config --global credential.helper store
 - Patch
 - Git Server (SSH-based)
 
----
+***
 
 ## Quick Start
 
