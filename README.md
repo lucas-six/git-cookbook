@@ -1,5 +1,35 @@
 # Git Cookbook
 
+<section align="center">
+  <img src="https://leven-cn.github.io/git-cookbook/img/git-logo.png"
+    alt="Git Logo" width="200" height="200" title="Git Logo">
+  <br><br>
+  <p>
+    <a href="https://github.com/leven-cn/git-cookbook/actions/workflows/lint.yml">
+      <img src="https://github.com/leven-cn/git-cookbook/actions/workflows/lint.yml/badge.svg"
+      alt="GitHub Actions - lint" style="max-width:100%;">
+    </a>
+  </p>
+  <p>Recipes for <code>Git</code>.</p>
+  <p><a href="https://leven-cn.github.io/git-cookbook/">https://leven-cn.github.io/git-cookbook/</a></p>
+</section>
+
+**Git** is a free and open source **distributed** **version control system** (**VCS**) designed
+to handle everything from small to very large projects with *speed* and *efficiency*.
+Actually, it is used for *tracking changes* in any set of files,
+usually used for coordinating work among programmers collaboritively developing source code
+during software development, thus it is called *source code management system*, *SCM*.
+
+Git was created by *Linus Torvalds* in *2005* for development of the Linux kernel,
+with other kernel developers contributing to its initial development.
+Since 2005, *Junio Hamano* has been the core maintainer.
+
+## Recipes
+
+- [Git Features](https://leven-cn.github.io/git-cookbook/recipes/git_features)
+
+***
+
 Getting started with Git, please read the Chapter 1,2,3 of [Pro Git](https://www.git-scm.com/book/en/)
 ([中文版](https://www.git-scm.com/book/zh/)).
 
@@ -301,3 +331,7 @@ sudo passwd git
 sudo chown git:git  /<path-to-git-repo>
 gpasswd -a <user> git
 ```
+
+## License
+
+[MIT License](https://github.com/leven-cn/git-cookbook/blob/main/LICENSE)
