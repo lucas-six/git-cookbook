@@ -21,9 +21,6 @@ git config --global user.email your@email.com  # Your working email, just as Git
 sudo git config --system core.editor vim
 sudo git config --system diff.tool vimdiff
 sudo git config --system merge.tool vimdiff
-git config --global core.editor vim
-git config --global diff.tool vimdiff
-git config --global merge.tool vimdiff
 
 # editor/diff-tool (GUI: VSCode)
 git config --global core.editor "code --wait"
@@ -31,16 +28,16 @@ git config --global diff.tool "vscode"
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Line Endings Issues (CRLF)
-sudo git config --system core.eol native
 git config --global core.autocrlf input  # Local: Linux, macOS, UNIX
 git config --global core.autocrlf true   # Local: Windows, Remote: non-Windows
 git config --global core.autocrlf false  # Both Windows
-git config --global core.safecrlf true
 
 git config --global push.default simple
 
-sudo git config --system help.autocorrect 1
+sudo git config --system core.eol native
+sudo git config --system core.safecrlf true
 sudo git config --system core.filemode true
+sudo git config --system help.autocorrect 1
 sudo git config --system gui.encoding utf-8
 
 # Show your current configuration
@@ -122,12 +119,16 @@ git commit -m '<commit message>'
 git commit -a -m '<commit message>'
 ```
 
-For more details for [[Git add]], [[Git remove]], [[Git restore]], [[Git commit]], [[Git reset]],
+More details about [Git Add](https://leven-cn.github.io/git-cookbook/recipes/git_add),
+[[Git remove]], [[Git restore]], [[Git commit]], [[Git reset]],
 [[Git diff]].
 
 ## More
 
 - [Git Features](https://leven-cn.github.io/git-cookbook/recipes/git_features)
+- [Git URL](https://leven-cn.github.io/git-cookbook/recipes/git_url)
+- [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone)
+- [Git Add](https://leven-cn.github.io/git-cookbook/recipes/git_add)
 
 ## References
 
