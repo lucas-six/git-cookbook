@@ -34,7 +34,8 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [Git Workflow](https://leven-cn.github.io/git-cookbook/recipes/git_workflow)
 - [Git whitespace errors](https://leven-cn.github.io/git-cookbook/recipes/git_whitespace_errors)
 - [Git Handling Line Endings (CRLF)](https://leven-cn.github.io/git-cookbook/recipes/git_line_endings)
-- [Git Add](https://leven-cn.github.io/git-cookbook/recipes/git_add)
+- [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
+- [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 
 ***
 
