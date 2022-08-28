@@ -16,7 +16,7 @@ git version  # v2.23+
 git clone https://github.com/leven-cn/git-cookbook.git
 ```
 
-More details to see [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone).
+More details to see [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone) and [Git URL](https://leven-cn.github.io/git-cookbook/recipes/git_url).
 
 ## Git Config
 
