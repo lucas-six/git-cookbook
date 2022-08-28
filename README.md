@@ -38,29 +38,18 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
+- [`git branch`](https://leven-cn.github.io/git-cookbook/recipes/git_branch)
 
 ***
 
-- Undo
 - Log
 - Version Difference
-- Delete Branch
 - Tag
 - Remote Branch
 - Patch
 - Git Server (SSH-based)
 
 ***
-
-## Undo
-
-```bash
-git checkout -- <file ...>      # undo updates of `git add`
-
-git reset HEAD <file ...>       # undo `git add`
-
-git commit --amend              # update `git commit`
-```
 
 ## Log
 
@@ -75,14 +64,6 @@ git log -p -N          # Show difference among lastest N commits
 
 ```bash
 git diff <branch-A>..<branch-B>
-```
-
-## Delete Branch
-
-```bash
-git branch -d <branch-name>    # merged branch
-
-git branch -D <branch-name>    # NOT merged branch
 ```
 
 ## Tag
