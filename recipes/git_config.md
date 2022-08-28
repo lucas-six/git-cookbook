@@ -16,19 +16,19 @@ git config --file <config-file> <name> [<value>]
 - **`--worktree`** for current working tree
 - **`--file`**, **`-f`** for specified file `config-file`
 
-## User Info
-
-```bash
-git config --global user.name 'Your Name'
-git config --global user.email your@email.com  # Your working email, just as GitHub registered email
-```
-
 ## Show Current Configuration
 
 ```bash
 git config --list  # all configs
 
 git config <name>  # specified config
+```
+
+## User Info
+
+```bash
+git config --global user.name 'Your Name'
+git config --global user.email your@email.com  # Your working email, just as GitHub registered email
 ```
 
 ## Editor: `core.editor`
@@ -148,87 +148,26 @@ and *`color.grep`* that control the use of color per command family.
 
 ## Line Endings Issues
 
-### `core.autocrlf`
-
-Git can handle this by auto-converting *CRLF* line endings into *LF*
-when you add a file to the index (`git add`), and vice versa when it checks out code onto your filesystem.
-
-If you’re on a **Windows** machine, set the setting *`core.autocrlf`* to **`true`** —
-this converts *LF* endings into *CRLF* when you check out code:
-
 ```bash
-# Checkout Windows-style, commit Unix-style line endings
+# Local Windows: Checkout Windows-style, commit Unix-style line endings
 git config --global core.autocrlf true
-```
 
-If you’re on a **Linux**, **UNIX** or **Mac** system that uses *LF* line endings,
-then you don’t want Git to automatically convert them when you check out files;
-however, if a file with *CRLF* endings accidentally gets introduced, then you may want Git to fix it.
-You can tell Git to convert *CRLF* to *LF* on commit
-but not the other way around by setting *`core.autocrlf`* to **`input`**:
-
-```bash
-# Checkout as-is, commit Unix-style line endings
+# Local Linux/macOS/UNIX: Checkout as-is, commit Unix-style line endings
 git config --global core.autocrlf input
-```
 
-If you’re a Windows programmer doing a **Windows-only** project, then you can turn off this functionality,
-recording the *carriage returns* (*CR*) in the repository by setting the config value to **`false`**：
-
-```bash
+# Both Windows
 # Checkout as-is, commit as-is
 git config core.autocrlf false
+
+git config core.safecrlf true
+git config core.eol native
 ```
 
-!!! warn "Note"
-    `core.autocrlf` will not affect content which is already in the repository.
-    If you've committed something with CRLF endings previously, they'll stay that way.
-    This is a very good reason to avoid depending on `core.autocrlf`;
-    if one user doesn't have it set, they can get content with CRLF endings into the repo,
-    and it'll stick around.
-
-### `core.safecrlf`
-
-**`core.safecrlf`** is basically just a way to
-make sure you don't irreversably perform CRLF conversion on a **binary file**.
-
-If *`true`*, makes Git check if converting CRLF is reversible *when end-of-line conversion*
-(*`core.autocrlf`*) is active (*`true`* or *`input`*).
-Git will verify if a command modifies a file in the work tree either directly or indirectly.
-For example, committing a file followed by checking out the same file should yield the original file
-in the work tree.
-If this is not the case for the current setting of `core.autocrlf`, Git will reject the file:
-
-```bash
-$ git add somefile
-fatal: CRLF would be replaced by LF in somefile.
-```
-
-The variable can be set to *`warn`*,
-in which case Git will only warn about an irreversible conversion but continue the operation.
-
-```bash
-$ git config core.safecrlf warn
-
-$ git add somefile
-warn: CRLF would be replaced by LF in somefile.
-```
-
-### `core.eol`
-
-Sets the line ending type to use in the working directory for files that are marked as text.
-Alternatives are **`lf`**, **`crlf`** and **`native`**, which uses the platform’s native line ending.
-The default value is *`native`*.
-
-```bash
-git config core.eol lf      # LF
-git config core.eol crlf    # CRLF
-git config core.eol native  # platform (default)
-```
+More details about [Git Handling Line Endings (CRLF)](https://leven-cn.github.io/git-cookbook/recipes/git_line_endings).
 
 ## Whitespace Error: `core.whitespace` / `apply.whitespace`
 
-A comma separated list of common **whitespace problems** to notice. (See [[Git whitespace errors]])
+A comma separated list of common **whitespace problems** to notice. (See [Git whitespace errors](https://leven-cn.github.io/git-cookbook/recipes/git_whitespace_errors))
 
 *`git diff`* will use *`color.diff.whitespace`* to highlight them,
 and *`git apply --whitespace=error`* will consider them as errors.
@@ -292,6 +231,7 @@ This is primarily meant for people who want to avoid mistakes by always being ex
 ```bash
 sudo git config --system core.editor vim
 sudo git config --system diff.tool vimdiff
+sudo git config --system core.eol native
 sudo git config --system help.autocorrect 1
 sudo git config --system core.filemode true
 sudo git config --system gui.encoding utf-8

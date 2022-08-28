@@ -51,12 +51,11 @@ recording the *carriage returns* (*CR*) in the repository by setting the config 
 git config core.autocrlf false
 ```
 
-!!! warn "Note"
-    `core.autocrlf` will not affect content which is already in the repository.
-    If you've committed something with CRLF endings previously, they'll stay that way.
-    This is a very good reason to avoid depending on `core.autocrlf`;
-    if one user doesn't have it set, they can get content with CRLF endings into the repo,
-    and it'll stick around.
+**Note**: `core.autocrlf` will not affect content which is already in the repository.
+If you've committed something with CRLF endings previously, they'll stay that way.
+This is a very good reason to avoid depending on `core.autocrlf`;
+if one user doesn't have it set, they can get content with CRLF endings into the repo,
+and it'll stick around.
 
 ## CRLF Safety Check
 
