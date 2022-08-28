@@ -232,8 +232,9 @@ This is primarily meant for people who want to avoid mistakes by always being ex
 sudo git config --system core.editor vim
 sudo git config --system diff.tool vimdiff
 sudo git config --system core.eol native
-sudo git config --system help.autocorrect 1
+sudo git config --system core.safecrlf true
 sudo git config --system core.filemode true
+sudo git config --system help.autocorrect 1
 sudo git config --system gui.encoding utf-8
 
 git config --global user.name 'Your Name'
