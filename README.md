@@ -37,10 +37,10 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
+- [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
 
 ***
 
-- Commit Message
 - Undo
 - Log
 - Version Difference
@@ -51,22 +51,6 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - Git Server (SSH-based)
 
 ***
-
-## Commit Message
-
-```markdown
-This update contains improvement and bug fixes, including:
-
-    - Fixed bugs where user cannot signup
-
-    - Fixed bugs that prevent A from doing sth
-
-    - Fixed issues that could cause B crash when ...
-
-    - Improved reliability of C when ...
-
-    - Improved performance of D when ..
-```
 
 ## Undo
 

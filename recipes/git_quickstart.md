@@ -122,8 +122,8 @@ git commit -a -m '<commit message>'
 More details about [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add),
 [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm),
 [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore),
-[[Git commit]], [[Git reset]],
-[[Git diff]].
+[`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit),
+[[Git reset]], [[Git diff]].
 
 ## More
 
@@ -133,6 +133,7 @@ More details about [`git add`](https://leven-cn.github.io/git-cookbook/recipes/g
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
+- [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
 
 ## References
 
