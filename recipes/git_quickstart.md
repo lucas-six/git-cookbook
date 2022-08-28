@@ -10,6 +10,45 @@ Display **version information** about Git:
 git version  # v2.23+
 ```
 
+## Git Config
+
+```bash
+# user info
+git config --global user.name 'Your Name'
+git config --global user.email your@email.com  # Your working email, just as GitHub registered email
+
+# editor/diff-tool (Command-Line: Vim)
+sudo git config --system core.editor vim
+sudo git config --system diff.tool vimdiff
+sudo git config --system merge.tool vimdiff
+git config --global core.editor vim
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+
+# editor/diff-tool (GUI: VSCode)
+git config --global core.editor "code --wait"
+git config --global diff.tool "vscode"
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+
+# Line Endings Issues (CRLF)
+sudo git config --system core.eol native
+git config --global core.autocrlf input  # Local: Linux, macOS, UNIX
+git config --global core.autocrlf true   # Local: Windows, Remote: non-Windows
+git config --global core.autocrlf false  # Both Windows
+git config --global core.safecrlf true
+
+git config --global push.default simple
+
+sudo git config --system help.autocorrect 1
+sudo git config --system core.filemode true
+sudo git config --system gui.encoding utf-8
+
+# Show your current configuration
+git config --list
+```
+
+More details to see [Git Configuration](https://leven-cn.github.io/git-cookbook/recipes/git_config).
+
 ## Git Clone
 
 ```bash
@@ -17,44 +56,6 @@ git clone https://github.com/leven-cn/git-cookbook.git
 ```
 
 More details to see [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone) and [Git URL](https://leven-cn.github.io/git-cookbook/recipes/git_url).
-
-## Git Config
-
-User info:
-
-```bash
-git config --global user.name 'Your Name'
-git config --global user.email your@email.com  # Your working email, just as GitHub registered email
-```
-
-Editor (command line: *Vim*, *Emacs*)
-
-```bash
-git config --global core.editor vim
-git config --global diff.tool vimdiff
-git config --global merge.tool vimdiff
-```
-
-```bash
-git config --global core.editor emacs
-```
-
-Editor (GUI: *VS Code*)
-
-```bash
-git config --global core.editor "code --wait"
-git config --global diff.tool "code --wait ---diff $LOCAL $REMOTE"
-```
-
-Show your current configuration:
-
-```bash
-git config --list  # all configs
-
-git config <name>  # specified config
-```
-
-More details to see [Git Configuration](https://leven-cn.github.io/git-cookbook/recipes/git_config).
 
 ## Lifecyle
 

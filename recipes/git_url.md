@@ -1,9 +1,6 @@
 # Git URL
 
-Git supports **ssh**, **git**, **http**, and **https** protocols.
-
-The native transport (i.e. `git://URL)` does no authentication
-and should be used with caution on unsecured networks.
+Git supports **ssh**, **git**, and **http[s]** protocols.
 
 The following syntaxes may be used with them:
 
@@ -12,6 +9,9 @@ The following syntaxes may be used with them:
 - *`git://host[:port]/path/to/repo.git/`*
 
 - *`http[s]://host[:port]/path/to/repo.git/`*
+
+The native transport (i.e. `git://URL)` does no authentication
+and should be used with caution on unsecured networks.
 
 An alternative **scp**-like syntax may also be used with the ssh protocol:
 
