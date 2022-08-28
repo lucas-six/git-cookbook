@@ -36,6 +36,7 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [Git Handling Line Endings (CRLF)](https://leven-cn.github.io/git-cookbook/recipes/git_line_endings)
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
+- [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
 
 ***
 
