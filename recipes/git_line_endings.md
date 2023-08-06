@@ -159,3 +159,7 @@ git config core.eol lf      # LF
 git config core.eol crlf    # CRLF
 git config core.eol native  # platform (default)
 ```
+
+## More
+
+- [Linux Cookbook - End of Line (EOL): **CRLF**](https://leven-cn.github.io/linux-cookbook/cookbook/general_concepts/eol_crlf)
