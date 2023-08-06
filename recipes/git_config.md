@@ -229,20 +229,33 @@ This is primarily meant for people who want to avoid mistakes by always being ex
 ## Example
 
 ```bash
-sudo git config --system core.editor vim
-sudo git config --system diff.tool vimdiff
+sudo git config --system color.ui true
 sudo git config --system core.eol native
 sudo git config --system core.safecrlf true
 sudo git config --system core.filemode true
+sudo git config --system core.editor vim
+sudo git config --system diff.tool vimdiff
 sudo git config --system help.autocorrect 1
 sudo git config --system gui.encoding utf-8
+sudo git config --system credential.helper store
+
+sudo git lfs install --system
 
 git config --global user.name 'Your Name'
 git config --global user.email your@email.com
-git config --global core.editor "code --wait"
+git config --global init.defaultBranch main
 git config --global core.autocrlf input
+git config --global core.safecrlf true
+git config --global core.filemode true
+git config --global core.editor "code --wait"
+git config --global core.whitespace "trailing-space,space-before-tab,-indent-with-non-tab,-tab-in-indent,cr-at-eol"
 git config --global diff.tool "vscode"
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+git config --global apply.whitespace fix
+git config --global credential.helper osxkeychain
+git config --global pull.rebase false
+git config --global push.default simple
+git config --global push.autoSetupRemote true
 git config --global push.default simple
 ```
 

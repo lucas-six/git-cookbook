@@ -99,7 +99,7 @@ git branch -M <old-branch> <existed-branch>
 git branch --move --force <old-branch> <existed-branch>
 ```
 
-## Copy Branches
+### Copy Branches
 
 ```bash
 # copy branch: `-c`/`--copy`
@@ -112,7 +112,7 @@ git branch -C <old-branch> <new-branch>
 git branch --copy --force <old-branch> <new-branch>
 ```
 
-## Delete Branches
+### Delete Branches
 
 ```bash
 # delete branch: `-d`/`--delete`
@@ -124,7 +124,7 @@ git branch -D <branch>    # NOT merged branch
 git branch --delete --force <branch>    # NOT merged branch
 ```
 
-## Set Up Upstream Tracking
+### Set Up Upstream Tracking
 
 Use option **`-u`**/**`--set-upstream-to`** (*`--set-upstream`* 废弃):
 
@@ -132,7 +132,7 @@ Use option **`-u`**/**`--set-upstream-to`** (*`--set-upstream`* 废弃):
 git branch --set-upstream-to=<remote-branch> <branch>
 ```
 
-## Remove Upstream Tracking
+### Remove Upstream Tracking
 
 Use option **`--unset-upstream`**:
 
@@ -140,7 +140,7 @@ Use option **`--unset-upstream`**:
 git branch --unset-upstream <branch>
 ```
 
-## Merge Branches
+### Merge Branches
 
 ```bash
 git merge <branch>
