@@ -37,6 +37,7 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [Git whitespace errors](https://leven-cn.github.io/git-cookbook/recipes/git_whitespace_errors)
 - [Git Handling Line Endings (CRLF)](https://leven-cn.github.io/git-cookbook/recipes/git_line_endings)
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
+- [`git diff`](https://leven-cn.github.io/git-cookbook/recipes/git_diff)
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
@@ -45,19 +46,12 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 
 ***
 
-- Version Difference
 - Tag
 - Remote Branch
 - Patch
 - Git Server (SSH-based)
 
 ***
-
-## Version Difference
-
-```bash
-git diff <branch-A>..<branch-B>
-```
 
 ## Tag
 
