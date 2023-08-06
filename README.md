@@ -43,24 +43,15 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
 - [`git branch`](https://leven-cn.github.io/git-cookbook/recipes/git_branch)
 - [`git log`](https://leven-cn.github.io/git-cookbook/recipes/git_log)
+- [`git tag`](https://leven-cn.github.io/git-cookbook/recipes/git_tag)
 
 ***
 
-- Tag
 - Remote Branch
 - Patch
 - Git Server (SSH-based)
 
 ***
-
-## Tag
-
-```bash
-git tag -a <tag> -m '<tag-comment>'      # e.g., git tag -a 'v0.1' -m 'v0.1 - Initial version'
-
-git push --tag                           # Add remote tag
-git push origin :refs/tags/<tag-name>    # Delete remote tag
-```
 
 ## Remote Branch
 
