@@ -130,6 +130,7 @@ More details about [`git add`](https://leven-cn.github.io/git-cookbook/recipes/g
 - [Git Features](https://leven-cn.github.io/git-cookbook/recipes/features)
 - [Git Configuration](https://leven-cn.github.io/git-cookbook/recipes/git_config)
 - [Bash Prompt String](https://leven-cn.github.io/git-cookbook/recipes/bash_prompt)
+- [Bash AutoCompletion](https://leven-cn.github.io/git-cookbook/recipes/bash_autocompletion)
 - [Git URL](https://leven-cn.github.io/git-cookbook/recipes/git_url)
 - [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone)
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
