@@ -46,32 +46,7 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git log`](https://leven-cn.github.io/git-cookbook/recipes/git_log)
 - [`git tag`](https://leven-cn.github.io/git-cookbook/recipes/git_tag)
 - [Git Patch](https://leven-cn.github.io/git-cookbook/recipes/git_patch)
-
-***
-
-- Git Server (SSH-based)
-
-***
-
-## Git Server (SSH-based)
-
-```bash
-mkdir <project>.git
-cd <project>.git
-git init --bare
-
-git clone --bare <project-dir> <git-repo>.git
-scp -r <git-repo>.git <user>@<git-server>:/<path-to-git-repo>
-
-# On Git Server
-sudo adduer git
-sudo passwd git
-ssh <user>@<git-server>
-sudo adduser git
-sudo passwd git
-sudo chown git:git  /<path-to-git-repo>
-gpasswd -a <user> git
-```
+- [Git Server (SSH-based)](https://leven-cn.github.io/git-cookbook/recipes/git_ssh_server)
 
 ## License
 
