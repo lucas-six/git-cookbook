@@ -41,10 +41,10 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
 - [`git branch`](https://leven-cn.github.io/git-cookbook/recipes/git_branch)
+- [`git log`](https://leven-cn.github.io/git-cookbook/recipes/git_log)
 
 ***
 
-- Log
 - Version Difference
 - Tag
 - Remote Branch
@@ -52,15 +52,6 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - Git Server (SSH-based)
 
 ***
-
-## Log
-
-```bash
-git log
-
-git log -p             # Show difference
-git log -p -N          # Show difference among lastest N commits
-```
 
 ## Version Difference
 
