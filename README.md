@@ -45,44 +45,13 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git remote`](https://leven-cn.github.io/git-cookbook/recipes/git_remote)
 - [`git log`](https://leven-cn.github.io/git-cookbook/recipes/git_log)
 - [`git tag`](https://leven-cn.github.io/git-cookbook/recipes/git_tag)
+- [Git Patch](https://leven-cn.github.io/git-cookbook/recipes/git_patch)
 
 ***
 
-- Patch
 - Git Server (SSH-based)
 
 ***
-
-## Patch
-
-### Create Git Patch
-
-```bash
-... (git commit -m)
-git format-patch -M <upstream-branch> <current-branch>.patch
-```
-
-### Apply Git Patch
-
-```bash
-git am <current-branch>.patch
-... (git add+commit)
-```
-
-### Create Standard Patch
-
-```bash
-... (git commit)
-git diff <upstream-branch> > <current-branch>.patch
-```
-
-### Apply Standard Patch
-
-```bash
-git apply --check <current-branch>.patch
-git apply <current-branch>.patch
-... (git add+commit)
-```
 
 ## Git Server (SSH-based)
 
