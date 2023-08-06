@@ -134,6 +134,7 @@ More details about [`git add`](https://leven-cn.github.io/git-cookbook/recipes/g
 - [Git URL](https://leven-cn.github.io/git-cookbook/recipes/git_url)
 - [Git Clone](https://leven-cn.github.io/git-cookbook/recipes/git_clone)
 - [`git add`](https://leven-cn.github.io/git-cookbook/recipes/git_add)
+- [`git diff`](https://leven-cn.github.io/git-cookbook/recipes/git_diff)
 - [`git rm`](https://leven-cn.github.io/git-cookbook/recipes/git_rm)
 - [`git restore`](https://leven-cn.github.io/git-cookbook/recipes/git_restore)
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
