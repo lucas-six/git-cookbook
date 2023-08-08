@@ -2,28 +2,52 @@
 
 Add or *track* file contents to the *index* or *staging area*.
 
-## Usage
+## Recipes
+
+### Add one file
 
 ```bash
-# add one file
 git add README.md
+```
 
-# add multiple files
-git add <file1> <file2> ...
+### Add Multiple Files
 
-# file glob
+```bash
+git add <file1> <file2>
+```
+
+### Fileglobs
+
+```bash
 # Add all matching files whose extension is .c
 git add *.c
+```
 
-# add all files in a directory
-git add <dir or .>
+### Add All Files in Current Directory
 
-# ignore removal
-# or `git add --no-all <dir>`
-#
-# For Older versions of Git
-#   `git add <dir>` equivalent to `git add --no-all <dir>`
+```bash
+git add .
+```
+
+### Add Files With Leading Directory
+
+Add all files in the directory `dir`, e.g. `dir/file1`, `dir/file2`:
+
+```bash
+git add <dir>
+```
+
+### Ignore Removal
+
+Option **`--ignore-removal`** equivalent to **`--no-all`**.
+
+Update the index by adding new files that are unknown to the index and files modified
+in the working tree,
+but ignore files that have been removed from the working tree.
+
+```bash
 git add --ignore-removal <dir>
+git add --no-all <dir>
 ```
 
 ## References

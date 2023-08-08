@@ -1,146 +1,182 @@
 # Git Branch
 
-## Usage
+## List Branches
+
+### List Local Branches (`-l`/`--list`) (default)
 
 ```bash
-# list existing local branch: `-l`/`--list` (by default)
-# The current branch will be highlighted in green and marked with an asterisk (`*`)
 $ git branch
 * main
   develop
+```
 
+The current branch will be highlighted in *green* and marked with an *asterisk* (*`*`*)
 
-# list remote-tracking branches: `-r`/`--remotes`
+### List Remote-Tracking Branches (`-r`/`--remotes`)
+
+```bash
 $ git branch -r
 origin/HEAD -> origin/main
 origin/main
 upstream/main
+```
 
+### List Both Local and Remote Branches (`-a`/`--all`)
 
-# show both local and remote branches: `-a`/`--all`
+```bash
 $ git branch -a
 * main
   develop
   remotes/origin/HEAD -> origin/main
   remotes/origin/main
   remotes/upstream/main
+```
 
+### List Branches Verbosely (`-v`/`--verbose`)
 
-# Show sha1 and commit subject line for each head,
-# along with relationship to upstream branch (if any): `-v`/`--verbose`
+Show sha1 and commit subject line for each head, along with relationship to upstream branch (if any):
+
+```bash
 $ git branch -v
   iss53   93b412c Fix javascript issue
 * master  7a98805 Merge branch 'iss53'
   testing 782fd34 Add scott to the author list in the readme
+```
 
+### List Merged Branches (`--merged`)
 
-# Create a New Branch
-# This creates a new *pointer* to the same commit you’re currently on.
-# It didn’t switch to the new branch.
-# If branch existed: `fatal: A branch named 'existed-branch' already exists.`
-git branch <new-branch>
-git branch --orphan <orphan-branch>
+Only list branches whose tips are reachable from the specified `commit` (`HEAD` if not specified):
 
-
-# Create a new branch to the `start-point` commit,
-# and force to reset branches already existed: `-f`/`--force`
-# `start-point` can be the branch name, commit id, tag name.
-git branch [-f|--force] <new-branch> <start-point>
-
-
-# Switch branches (one of follows)
-# If branch not existed: `fatal: invalid reference: non-existed-branch`
-git switch <another-branch>
-git checkout <another-branch>  # Git <= 2.23
-
-
-# Switch back to the previous branch
-git switch -
-
-
-# Create new branch if branch not existed and switch to it: `-c`/`--create`
-# If branch existed: `fatal: A branch named 'existed-branch' already exists.`
-git switch -c|--create [-t|--track [direct|inherit]] <new-branch>
-git checkout -b [-t [direct|inherit]] <new-branch>  # Git <= 2.23
-
-
-# Create new branch if branch already exists, and switch to it: `-C`/`--force-create`
-# `start-point` can be the branch name, commit id, tag name.
-git switch -C|--force-create <new-branch> <start-point>
-git checkout -B <new-branch> <start-point>  # Git <= 2.23
-
-
-git switch --orphan <new-branch>
-git checkout --orphan <new-branch>  # Git <= 2.23
-
-
-# Track remote
-git branch --track <branch> <remote-branch>
-
-
-# Only list branches whose tips are reachable from the specified `commit` (`HEAD` if not specified)
+```bash
 git branch --merged [<commit>]
+```
 
+### List Un-Merged Branches (`--no-merged`)
 
-# Only list branches whose tips are not reachable from the specified `commit` (`HEAD` if not specified)
+Only list branches whose tips are not reachable from the specified `commit` (`HEAD` if not specified):
+
+```bash
 git branch --no-merged [<commit>]
 ```
 
-### Rename Branches
+## Create a New Branch
 
 ```bash
-# rename branch: `-m`/`--move`
+# `start-point` can be the *branch name*, *commit id*, *tag name*.
+git branch [-f|--force] <new-branch> [<start-point>]
+
+# track remote upstream
+git branch -t|--track <branch> <remote-branch>
+
+git branch --orphan <orphan-branch>
+```
+
+### Error
+
+```bash
+# already exists
+$ git branch existed-branch
+fatal: A branch named 'existed-branch' already exists.
+```
+
+## Switch Branches
+
+```bash
+git switch <another-branch>
+
+# back to previous
+git switch -
+
+# create and switch
+#   `start-point` can be the *branch name*,
+#                            *commit id*,
+#                            *tag name*.
+git switch -c|--create <new-branch> [<start-point>]
+git switch -C|--force-create <new-branch> <start-point>
+
+# track remote upstream
+git switch -c|--create -t|--track [direct|inherit] <new-branch>
+
+git switch --orphan <new-branch>
+```
+
+### Error
+
+```bash
+# not exists
+$ git switch a-branch
+fatal: invalid reference: a-branch
+
+# already exists
+$ git switch -c existed-branch
+fatal: A branch named 'existed-branch' already exists.
+```
+
+### Switch Branches (`git checkout`, Git 2.23-)
+
+```bash
+git checkout <another-branch>
+
+# create and switch
+git checkout -b <new-branch> [<start-point>]
+git checkout -B <new-branch> <start-point>
+
+# track remote upstream
+git checkout -b -t|--track=[direct|inherit] <new-branch>
+
+git checkout --orphan <new-branch>
+```
+
+## Rename Branches
+
+```bash
 # If branch existed: `fatal: A branch named 'new-branch' already exists.`
 git branch -m|--move <old-branch> <new-branch>
 
 
-# force to rename: `-M` / `--move --force`
+# force to rename:
+# `-M` = `--move --force`
 git branch -M <old-branch> <existed-branch>
-git branch --move --force <old-branch> <existed-branch>
 ```
 
-### Copy Branches
+## Copy Branches
 
 ```bash
-# copy branch: `-c`/`--copy`
 # If branch existed: `fatal: A branch named 'b-branch' already exists.`
 git branch -c|--copy <old-branch> <new-branch>
 
 
-# force to copy: `-C` / `--copy, --force`
+# force to copy
+# `-C` = `--copy, --force`
 git branch -C <old-branch> <new-branch>
-git branch --copy --force <old-branch> <new-branch>
 ```
 
-### Delete Branches
+## Delete Branches
 
 ```bash
-# delete branch: `-d`/`--delete`
 git branch -d|--delete <branch>    # fully merged branch
 
-
-# force to delete: `-D` / `--delete, --force``
+# force to delete
+# `-D` = `--delete, --force``
 git branch -D <branch>    # NOT merged branch
-git branch --delete --force <branch>    # NOT merged branch
 ```
+
+## Upstream Tracking
 
 ### Set Up Upstream Tracking
 
-Use option **`-u`**/**`--set-upstream-to`** (*`--set-upstream`* 废弃):
-
 ```bash
-git branch --set-upstream-to=<remote-branch> <branch>
+# `--set-upstream`* deprecated
+git branch -u|--set-upstream-to=<remote-branch> <branch>
 ```
 
 ### Remove Upstream Tracking
-
-Use option **`--unset-upstream`**:
 
 ```bash
 git branch --unset-upstream <branch>
 ```
 
-### Merge Branches
+## Merge Branches
 
 ```bash
 git merge <branch>

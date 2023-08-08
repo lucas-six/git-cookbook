@@ -43,10 +43,13 @@ Since 2005, *Junio Hamano* has been the core maintainer.
 - [`git commit`](https://leven-cn.github.io/git-cookbook/recipes/git_commit)
 - [`git branch`](https://leven-cn.github.io/git-cookbook/recipes/git_branch)
 - [`git remote`](https://leven-cn.github.io/git-cookbook/recipes/git_remote)
+- [Git Rebase](https://leven-cn.github.io/git-cookbook/recipes/git_rebase)
 - [`git log`](https://leven-cn.github.io/git-cookbook/recipes/git_log)
 - [`git tag`](https://leven-cn.github.io/git-cookbook/recipes/git_tag)
+- [Git Credential](https://leven-cn.github.io/git-cookbook/recipes/git_credential)
 - [Git Patch](https://leven-cn.github.io/git-cookbook/recipes/git_patch)
 - [Git Server (SSH-based)](https://leven-cn.github.io/git-cookbook/recipes/git_ssh_server)
+- `git checkout`: Git *2.23.0*, **`switch`** and **`restore`** were added to replace `checkout`
 
 ## License
 
