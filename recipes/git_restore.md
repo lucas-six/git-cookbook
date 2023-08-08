@@ -18,8 +18,7 @@ git restore *.c
 git restore <dir or .>
 
 # restore index files (one of follows)
-git restore --staged <file or dir>
-git restore -S <file or dir>
+git restore -S|--staged <file or dir>
 git reset HEAD <file or dir>
 
 # restore both working tree and index files (one of follows)
