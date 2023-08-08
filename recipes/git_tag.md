@@ -1,14 +1,36 @@
 # `git tag`
 
-## Usage
+## List Tags
 
 ```bash
-git tag -a <tag> -m '<tag-comment>'      # e.g., git tag -a 'v0.1' -m 'v0.1 - Initial version'
+git tag
+```
 
-git push --tag                           # Add remote tag
-git push origin :refs/tags/<tag-name>    # Delete remote tag
+## Delete a Local Tag
+
+```bash
+git tag -d|--delete <tag-name>
+```
+
+## Push to Remote
+
+```bash
+git push --tag
+```
+
+## Delete Remote Tag
+
+```bash
+git push <repo-name> :refs/tags/<tag-name>
+```
+
+## Make an Unsigned, Annotated Tag Object
+
+```bash
+git tag -a|--annotate <tag-name> -m|--message '<tag-comment>'
 ```
 
 ## References
 
 - [Git Documentation - `git tag`](https://git-scm.com/docs/git-tag)
+- [Semantic Versioning](https://semver.org)

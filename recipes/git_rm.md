@@ -18,11 +18,7 @@ git rm *.c
 git rm -r <dir>
 
 # remove part-staged files
-#
-# The files being removed have to be identical to the tip of the branch,
-# and no updates to their contents can be staged in the index,
-# though that default behavior can be overridden with the **`-f`**/**`--force`** option.
-git rm -f <file>
+git rm -f|--force <file>
 ```
 
 ## References
