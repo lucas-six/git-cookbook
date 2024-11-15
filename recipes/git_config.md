@@ -253,10 +253,11 @@ git config --global diff.tool "vscode"
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 git config --global apply.whitespace fix
 git config --global credential.helper osxkeychain
-git config --global pull.rebase false
+git config --global pull.rebase true
 git config --global push.default simple
 git config --global push.autoSetupRemote true
 git config --global push.default simple
+git config --global merge.autoStash true
 ```
 
 ## References
